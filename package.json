@@ -1,0 +1,22 @@
+{
+	"name": "react-flow-player",
+	"version": "1.0.0",
+	"description": "React component for embeding flow player",
+	"main": "dist/react-flow-player.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "babel src --out-dir dist"
+	},
+	"author": "Aman Agarwal",
+	"license": "ISC",
+	"dependencies": {
+		"prop-types": "^15.6.0",
+		"ramda": "^0.25.0",
+		"react": "^16.2.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-react": "^6.24.1"
+	}
+}
