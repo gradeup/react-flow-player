@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export default propTypesConfig = {
+const propTypesConfig = {
 	playerId: PropTypes.string.isRequired,
 	playerInitScript: PropTypes.string.isRequired,
 	sources: PropTypes.array.isRequired,
@@ -22,3 +22,5 @@ export default propTypesConfig = {
 	volume: PropTypes.number,
 	hlsPlugin: PropTypes.bool
 };
+
+export default propTypesConfig;

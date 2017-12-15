@@ -1,4 +1,4 @@
-export default defaultPropsInit = {
+const defaultPropsInit = {
 	className: '',
 	adaptiveRatio: false,
 	aspectRatio: '16:9',
@@ -14,3 +14,5 @@ export default defaultPropsInit = {
 	volume: 1.0,
 	hlsPlugin: false
 };
+
+export default defaultPropsInit;
