@@ -102,6 +102,8 @@ You can visit some links for reference:
 
 * [React](https://reactjs.org/)
 * [Flow Player Setup Options](https://flowplayer.com/docs/player/setup)
+* [Github Link For Repo](https://github.com/gradeup/react-flow-player)
+* [Npm Link for the module](https://www.npmjs.com/package/react-flow-player)
 
 ## Organisation
 [![Gradeup](https://gs-post-images.grdp.co/2017/2/img1486706448140-41-rs-high-webp.png)](https://gradeup.co)
