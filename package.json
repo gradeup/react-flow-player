@@ -21,7 +21,7 @@
 		"url" : "git+https://github.com/gradeup/react-flow-player"
 	},
 	"bugs": {
-		"url": "https://github.com/gradeup/react-flow-player/issues",
+		"url": "https://github.com/gradeup/react-flow-player/issues"
 	},
 	"homepage": "https://github.com/gradeup/react-flow-player#readme",
 	"dependencies": {
