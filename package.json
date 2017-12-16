@@ -7,8 +7,23 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "babel src --out-dir dist"
 	},
-	"author": "Aman Agarwal",
+	"keywords": [
+		"react",
+		"flow player",
+		"react flow player",
+		"react player component",
+		"react player"
+	],
+	"author": "Aman Agarwal <agarwal.aman041@gmail.com> (https://github.com/AmanAgarwal041/)",
 	"license": "ISC",
+	"repository" : { 
+		"type" : "git",
+		"url" : "git+https://github.com/gradeup/react-flow-player"
+	},
+	"bugs": {
+		"url": "https://github.com/gradeup/react-flow-player/issues",
+	},
+	"homepage": "https://github.com/gradeup/react-flow-player#readme",
 	"dependencies": {
 		"prop-types": "^15.6.0",
 		"ramda": "^0.25.0",
