@@ -1,6 +1,6 @@
 {
 	"name": "react-flow-player",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "React component for embeding flow player",
 	"main": "dist/react-flow-player.js",
 	"scripts": {
@@ -16,9 +16,9 @@
 	],
 	"author": "Aman Agarwal <agarwal.aman041@gmail.com> (https://github.com/AmanAgarwal041/)",
 	"license": "ISC",
-	"repository" : { 
-		"type" : "git",
-		"url" : "git+https://github.com/gradeup/react-flow-player"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gradeup/react-flow-player"
 	},
 	"bugs": {
 		"url": "https://github.com/gradeup/react-flow-player/issues"
