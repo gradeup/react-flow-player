@@ -12,7 +12,8 @@ const defaultPropsInit = {
 	rtmp: '',
 	speeds: [0.25, 0.5, 1.0, 1.5, 2.0],
 	volume: 1.0,
-	hlsPlugin: false
+	hlsPlugin: false,
+	customButton: []
 };
 
 export default defaultPropsInit;

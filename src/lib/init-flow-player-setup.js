@@ -1,3 +1,4 @@
+const noop = () => {};
 const initFlowPlayerSetup = props => {
 	const {
 		adaptiveRatio,
@@ -31,6 +32,14 @@ const initFlowPlayerSetup = props => {
 		speeds,
 		volume,
 	});
+	
+	const intervalBreak = setInterval(function(){
+		const item = document.getElementsByClassName('fp-controls');
+		if (item) {
+			(props.onLoad || noop)();
+			clearInterval(intervalBreak);
+		}
+	}, 100);
 };
 
 export default initFlowPlayerSetup;

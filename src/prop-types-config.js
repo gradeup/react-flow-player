@@ -20,7 +20,8 @@ const propTypesConfig = {
 	]),
 	speeds: PropTypes.array,
 	volume: PropTypes.number,
-	hlsPlugin: PropTypes.bool
+	hlsPlugin: PropTypes.bool,
+	customButton: PropTypes.array
 };
 
 export default propTypesConfig;

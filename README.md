@@ -8,32 +8,57 @@ npm install react-flow-player
 ```
 
 ## Usage
+
+### Without Custom Buttons
 ``` javascript
 import ReactFlowPlayer from 'react-flow-player';
 <ReactFlowPlayer
-    playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
-    playerId="reactFlowPlayer" 
-    sources={[
-        { 
-            type: 'video/webm', 
-            src: 'http://edge.flowplayer.org/functional.webm' 
-        }
-    ]}
+	playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
+	playerId="reactFlowPlayer" 
+	sources={[
+			{ 
+					type: 'video/webm', 
+					src: 'http://edge.flowplayer.org/functional.webm' 
+			}
+	]}
+/>
+```
+
+### With Custom Buttons
+``` javascript
+import ReactFlowPlayer from 'react-flow-player';
+<ReactFlowPlayer
+	playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
+	playerId="reactFlowPlayer" 
+	sources={[
+		{ 
+			type: 'video/webm', 
+			src: 'http://edge.flowplayer.org/functional.webm' 
+		}
+	]}
+	customButton={[
+		{
+			component: (<a>Custom React Component</a>),
+			class: 'fp-controls > .fp-volume',
+			id: 'custom-btn',
+			place: 'before',
+		},
+	]}
 />
 ```
 
 ## Required Props
 There are some props that are required by the component :
-  - `playerId`
-    - Id used to look for the div container in which the flow player is embedded.
-    - Type : **_String_**
-  - `playerInitScript`
-    - It is the url for the javascript code for the player setup that flowplayer community has provided.
-    - Type : **_String_**
-  - `sources`
-    - It is the url and type for the video that is to be embedded into the flowplayer.
-    - It can have multiple formats for the browser to detect and play the appropriate one.
-    - Type : **_Array_** _(Array of objects)_
+	- `playerId`
+		- Id used to look for the div container in which the flow player is embedded.
+		- Type : **_String_**
+	- `playerInitScript`
+		- It is the url for the javascript code for the player setup that flowplayer community has provided.
+		- Type : **_String_**
+	- `sources`
+		- It is the url and type for the video that is to be embedded into the flowplayer.
+		- It can have multiple formats for the browser to detect and play the appropriate one.
+		- Type : **_Array_** _(Array of objects)_
 
 ## Optional Props
 There are some props that are optional by the component :
@@ -95,6 +120,15 @@ There are some props that are optional by the component :
 	- The value for the integrating of the hlsplugin when the HLS video streaming protocol is used. Note : Mandatory to be true when the hls protocol is used otherwise the player will be unable to play the video.
 	- Type : **_Boolean_**
 	- Default : **false**
+- `customButton`
+	- The value makes the custom button that are required for different actions to be integrated on the flowplayer.
+	- Type : **_Array_**
+	- Default : **[]**
+	- Value contains array of objects :
+		- component :  contains the react component which will be displayed on the flowplayer
+		- class : Class that is present inside the flowplayer controls where the component is to be mounted
+		- id : id for checking presence of the id that the component should have
+		- place : 'before' (for inserting before the class specified) or default (for inserting after the class specified)
 
 ## Links
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {equals} from 'ramda';
 import initFlowPlayerSetup from './lib/init-flow-player-setup';
+import initFlowPlayerCustom from './lib/init-flow-player-custom';
 import initFlowPlayerScript from './lib/init-flow-player-script';
 import defaultPropsInit from './default-props-init';
 import propTypesConfig from './prop-types-config';
@@ -11,7 +12,8 @@ class ReactFlowPlayer extends React.Component {
 		this._initPlayer = this._initPlayer.bind(this);
 	}
 	_initPlayer() {
-		initFlowPlayerSetup(this.props);
+		const {customButton} = this.props;
+		initFlowPlayerSetup(Object.assign({}, this.props, { onLoad: () => initFlowPlayerCustom({customButton}) }));
 	}
 	componentDidMount() {
 		/* eslint-disable no-undef */
