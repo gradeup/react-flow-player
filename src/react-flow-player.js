@@ -12,8 +12,8 @@ class ReactFlowPlayer extends React.Component {
 		this._initPlayer = this._initPlayer.bind(this);
 	}
 	_initPlayer() {
-		const {customButton} = this.props;
-		initFlowPlayerSetup(Object.assign({}, this.props, { onLoad: () => initFlowPlayerCustom({customButton}) }));
+		const { customButton, seeking, seekingText } = this.props;
+		initFlowPlayerSetup(Object.assign({}, this.props, { onLoad: () => initFlowPlayerCustom({ customButton, seeking, seekingText }) }));
 	}
 	componentDidMount() {
 		/* eslint-disable no-undef */

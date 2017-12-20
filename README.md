@@ -38,7 +38,7 @@ import ReactFlowPlayer from 'react-flow-player';
 	]}
 	customButton={[
 		{
-			component: (<a>Custom React Component</a>),
+			component: (<a id="custom-btn">Custom React Component</a>),
 			class: 'fp-controls > .fp-volume',
 			id: 'custom-btn',
 			place: 'before',
@@ -49,16 +49,16 @@ import ReactFlowPlayer from 'react-flow-player';
 
 ## Required Props
 There are some props that are required by the component :
-	- `playerId`
-		- Id used to look for the div container in which the flow player is embedded.
-		- Type : **_String_**
-	- `playerInitScript`
-		- It is the url for the javascript code for the player setup that flowplayer community has provided.
-		- Type : **_String_**
-	- `sources`
-		- It is the url and type for the video that is to be embedded into the flowplayer.
-		- It can have multiple formats for the browser to detect and play the appropriate one.
-		- Type : **_Array_** _(Array of objects)_
+- `playerId`
+	- Id used to look for the div container in which the flow player is embedded.
+	- Type : **_String_**
+- `playerInitScript`
+	- It is the url for the javascript code for the player setup that flowplayer community has provided.
+	- Type : **_String_**
+- `sources`
+	- It is the url and type for the video that is to be embedded into the flowplayer.
+	- It can have multiple formats for the browser to detect and play the appropriate one.
+	- Type : **_Array_** _(Array of objects)_
 
 ## Optional Props
 There are some props that are optional by the component :
@@ -129,6 +129,14 @@ There are some props that are optional by the component :
 		- class : Class that is present inside the flowplayer controls where the component is to be mounted
 		- id : id for checking presence of the id that the component should have
 		- place : 'before' (for inserting before the class specified) or default (for inserting after the class specified)
+- `seeking`
+	- The seeking is the number of seconds by which the forward and backward works.
+	- Type : **_Number_**
+	- Default : **10**
+- `seekingText`
+	- The seeking is the texts for the seeking icons on the player.
+	- Type : **_String_**
+	- Default : **'10'**
 
 ## Links
 

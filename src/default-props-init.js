@@ -13,7 +13,9 @@ const defaultPropsInit = {
 	speeds: [0.25, 0.5, 1.0, 1.5, 2.0],
 	volume: 1.0,
 	hlsPlugin: false,
-	customButton: []
+	customButton: [],
+	seeking: 10,
+	seekingText: '10',
 };
 
 export default defaultPropsInit;

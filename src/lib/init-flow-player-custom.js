@@ -22,6 +22,51 @@ const initFlowPlayerCustom = props => {
 			}
 		}
 	});
+	const seekingBtn = document.getElementsByClassName('fp-backward');
+
+	if (props.seeking && !isNaN(props.seeking) && (!seekingBtn || seekingBtn.length === 0)) {
+		flowplayer((function () {
+			const common = flowplayer.common;
+			const	bean = flowplayer.bean;
+			const	fpControls = flowplayer();
+			const seekingText = props.seekingText;
+			const seekingTextBack = ((props.seekingText || '').trim() !== '') ? `-${props.seekingText}` : props.seekingText;
+			const	bw = common.createElement('a', { class: 'fp-backward' }, `${seekingTextBack}`);
+			const	fw = common.createElement('a', { class: 'fp-forward' }, `${seekingText}`);
+			const	seeking = props.seeking;
+
+			bean.on(bw, 'click', function () {
+				const target = fpControls.video.time - seeking;
+				if (isNaN(target) || !fpControls.video.time) {
+					fpControls.play();
+					fpControls.seek(0);
+				} else {
+					if (target >= 0) {
+						fpControls.seek(target);
+					} else {
+						fpControls.seek(0);
+					}
+				}
+			});;
+
+			bean.on(fw, 'click', function () {
+				const target = fpControls.video.time + seeking;
+				if (isNaN(target) || fpControls.video.duration){
+					fpControls.play();
+					fpControls.seek(seeking);
+				} else {
+					if (target <= fpControls.video.duration) {
+						fpControls.seek(target);
+					} else {
+						fpControls.seek(fpControls.video.duration);
+					}
+				}
+			});
+
+			common.prepend(common.find('.fp-controls')[0], bw);
+			common.insertAfter(common.find('.fp-controls')[0], common.find('.fp-controls > .fp-elapsed')[0], fw);
+		})())
+	}
 };
 
 export default initFlowPlayerCustom;
