@@ -137,6 +137,21 @@ There are some props that are optional by the component :
 	- The seeking is the texts for the seeking icons on the player.
 	- Type : **_String_**
 	- Default : **'10'**
+- `onError`
+	- The function that executes when there occurs an error while playing the video.
+	- Type : **_Function_**
+	- Default : **`() => {}`**
+	- Parameters : 
+	    -   first is the event object
+	    -   second is the flowplayer configured object
+	    -   third is the error object
+- `onResume`
+	- The function that executes when video playing resumes.
+	- Type : **_Function_**
+	- Default : **`() => {}`**
+	- Parameters : 
+	    -   first is the event object
+	    -   second is the flowplayer configured object
 
 ## Links
 

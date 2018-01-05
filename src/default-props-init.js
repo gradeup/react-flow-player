@@ -1,3 +1,4 @@
+import { noop } from './lib/noop';
 const defaultPropsInit = {
 	className: '',
 	adaptiveRatio: false,
@@ -16,6 +17,8 @@ const defaultPropsInit = {
 	customButton: [],
 	seeking: 10,
 	seekingText: '10',
+	onError: noop,
+	onResume: noop,
 };
 
 export default defaultPropsInit;

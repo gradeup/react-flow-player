@@ -1,4 +1,4 @@
-const noop = () => {};
+import { noop } from './noop';
 const initFlowPlayerSetup = props => {
 	const {
 		adaptiveRatio,
@@ -14,6 +14,8 @@ const initFlowPlayerSetup = props => {
 		rtmp,
 		speeds,
 		volume,
+		onError,
+		onResume,
 	} = props;
 	window.flowplayer(`#${props.playerId}`, {
 		clip: {
@@ -31,7 +33,7 @@ const initFlowPlayerSetup = props => {
 		rtmp,
 		speeds,
 		volume,
-	});
+	}).on('resume', onResume).on('error', onError);
 	
 	const intervalBreak = setInterval(function(){
 		const item = document.getElementsByClassName('fp-controls');

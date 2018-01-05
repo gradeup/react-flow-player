@@ -24,6 +24,8 @@ const propTypesConfig = {
 	customButton: PropTypes.array,
 	seeking: PropTypes.number,
 	seekingText: PropTypes.string,
+	onError: PropTypes.func,
+	onResume: PropTypes.func,
 };
 
 export default propTypesConfig;
