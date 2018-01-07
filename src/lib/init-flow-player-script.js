@@ -9,7 +9,7 @@ const initFlowPlayerScript = ({ context, onLoad, src, hlsPlugin }) => {
 	// Stylesheet for the basic flowplayer
 	const linkElem = context.createElement('link');
 	linkElem.rel = 'stylesheet';
-	linkElem.href = 'http://releases.flowplayer.org/7.2.1/skin/skin.css';
+	linkElem.href = 'https://releases.flowplayer.org/7.2.1/skin/skin.css';
 	context.head.appendChild(linkElem);
 	// Script for initializing the flowplayer
 	const scriptElem = context.createElement('script');
