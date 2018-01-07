@@ -51,7 +51,7 @@ const initFlowPlayerCustom = props => {
 
 			bean.on(fw, 'click', function () {
 				const target = fpControls.video.time + seeking;
-				if (isNaN(target) || fpControls.video.duration){
+				if (isNaN(target) || !fpControls.video.duration){
 					fpControls.play();
 					fpControls.seek(seeking);
 				} else {
