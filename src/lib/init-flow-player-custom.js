@@ -10,15 +10,17 @@ const initFlowPlayerCustom = props => {
 			let div = document.createElement('div');
 			render(val.component, div);
 			const elem = document.querySelector(`.${val.class}`);
-			switch(val.place) {
-				case 'append' :
-					elem.appendChild(div.childNodes[0]);
-					break;
-				default :
-					if (elem && elem.parentElement) {
-						elem.parentElement.insertBefore(div.childNodes[0], elem);
-					}
-					break;
+			if (elem) {
+				switch(val.place) {
+					case 'append' :
+						elem.appendChild(div.childNodes[0]);
+						break;
+					default :
+						if (elem && elem.parentElement) {
+							elem.parentElement.insertBefore(div.childNodes[0], elem);
+						}
+						break;
+				}
 			}
 		}
 	});
@@ -47,7 +49,7 @@ const initFlowPlayerCustom = props => {
 						fpControls.seek(0);
 					}
 				}
-			});;
+			});
 
 			bean.on(fw, 'click', function () {
 				const target = fpControls.video.time + seeking;
