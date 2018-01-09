@@ -27,7 +27,7 @@ const initFlowPlayerCustom = props => {
 	const seekingBtn = document.getElementsByClassName('fp-backward');
 
 	if (props.seeking && !isNaN(props.seeking) && (!seekingBtn || seekingBtn.length === 0)) {
-		flowplayer((function () {
+		(function () {
 			const common = flowplayer.common;
 			const	bean = flowplayer.bean;
 			const	fpControls = flowplayer();
@@ -65,9 +65,11 @@ const initFlowPlayerCustom = props => {
 				}
 			});
 
-			common.prepend(common.find('.fp-controls')[0], bw);
-			common.insertAfter(common.find('.fp-controls')[0], common.find('.fp-controls > .fp-elapsed')[0], fw);
-		})())
+			if (common.find('.fp-controls') && common.find('.fp-controls').length > 0) {
+				common.prepend(common.find('.fp-controls')[0], bw);
+				common.insertAfter(common.find('.fp-controls')[0], common.find('.fp-controls > .fp-elapsed')[0], fw);
+			}
+		})();
 	}
 };
 
