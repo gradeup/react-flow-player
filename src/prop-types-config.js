@@ -26,6 +26,10 @@ const propTypesConfig = {
 	seekingText: PropTypes.string,
 	onError: PropTypes.func,
 	onResume: PropTypes.func,
+	speedPlugin: PropTypes.bool,
+	hlsUrl: PropTypes.string,
+	speedUrl: PropTypes.string,
+	styleUrl: PropTypes.string,
 };
 
 export default propTypesConfig;

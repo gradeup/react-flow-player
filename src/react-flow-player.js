@@ -24,7 +24,7 @@ class ReactFlowPlayer extends React.Component {
 				context: document,
 				onLoad: this._initPlayer,
 				src: this.props.playerInitScript,
-				hlsPlugin: this.props.hlsPlugin
+				...this.props,
 			});
 		}
 		/* eslint-disable no-undef */

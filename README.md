@@ -152,6 +152,23 @@ There are some props that are optional by the component :
 	- Parameters : 
 	    -   first is the event object
 	    -   second is the flowplayer configured object
+- `speedPlugin`
+	- The speedPlugin is the boolean value for adding speed streaming for supported formats.
+	- Type : **_Boolean_**
+	- Default : **false**
+	- Rtmp doesn't support speed playing but hls does.
+- `hlsUrl`
+	- The hlsUrl is used for specifying the versioned url for the hls plugin script.
+	- Type : **_String_**
+	- Default : **https://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.light.min.js**
+- `speedUrl`
+	- The speedUrl is used for specifying the versioned url for the speed plugin script.
+	- Type : **_String_**
+	- Default : **https://releases.flowplayer.org/speed-menu/flowplayer.speed-menu.min.js**
+- `styleUrl`
+	- The styleUrl is used for specifying the versioned url for the stylesheet for the player's skin.
+	- Type : **_String_**
+	- Default : **https://releases.flowplayer.org/7.2.1/skin/skin.css**
 
 ## Links
 

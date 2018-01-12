@@ -19,6 +19,10 @@ const defaultPropsInit = {
 	seekingText: '10',
 	onError: noop,
 	onResume: noop,
+	speedPlugin: false,
+	hlsUrl: 'https://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.light.min.js',
+	speedUrl: 'https://releases.flowplayer.org/speed-menu/flowplayer.speed-menu.min.js',
+	styleUrl: 'https://releases.flowplayer.org/7.2.1/skin/skin.css',
 };
 
 export default defaultPropsInit;
