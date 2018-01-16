@@ -16,8 +16,10 @@ const initFlowPlayerSetup = props => {
 		volume,
 		onError,
 		onResume,
+		licenseKey,
+		logo,
 	} = props;
-	window.flowplayer(`#${props.playerId}`, {
+	const config = {
 		clip: {
 			sources,
 			title,
@@ -33,7 +35,14 @@ const initFlowPlayerSetup = props => {
 		rtmp,
 		speeds,
 		volume,
-	}).on('resume', onResume).on('error', onError);
+	};
+	if (licenseKey && licenseKey.length > 0) {
+		config.key = licenseKey;
+	}
+	if (logo && ((typeof logo === 'object' && (Object.keys(logo) || []).length > 0) || (typeof logo === 'string' && logo.length > 0))) {
+		config.logo = logo;
+	}
+	window.flowplayer(`#${props.playerId}`, config).on('resume', onResume).on('error', onError);
 	
 	const intervalBreak = setInterval(function(){
 		const item = document.getElementsByClassName('fp-controls');

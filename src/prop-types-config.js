@@ -30,6 +30,13 @@ const propTypesConfig = {
 	hlsUrl: PropTypes.string,
 	speedUrl: PropTypes.string,
 	styleUrl: PropTypes.string,
+	hlsConfig: PropTypes.bool,
+	hlsConfigUrl: PropTypes.string,
+	licenseKey: PropTypes.string,
+	logo: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.object
+	]),
 };
 
 export default propTypesConfig;

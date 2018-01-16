@@ -23,6 +23,10 @@ const defaultPropsInit = {
 	hlsUrl: 'https://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.light.min.js',
 	speedUrl: 'https://releases.flowplayer.org/speed-menu/flowplayer.speed-menu.min.js',
 	styleUrl: 'https://releases.flowplayer.org/7.2.1/skin/skin.css',
+	hlsConfig: false,
+	hlsConfigUrl: 'https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.8.4/hls.js',
+	licenseKey: '',
+	logo: '',
 };
 
 export default defaultPropsInit;

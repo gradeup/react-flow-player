@@ -32,7 +32,7 @@ const initFlowPlayerCustom = props => {
 			const	bean = flowplayer.bean;
 			const	fpControls = flowplayer();
 			const seekingText = props.seekingText;
-			const seekingTextBack = ((props.seekingText || '').trim() !== '') ? `-${props.seekingText}` : props.seekingText;
+			const seekingTextBack = ((props.seekingText || '').trim() !== '') ? `-${props.seekingText}` : `+${props.seekingText}`;
 			const	bw = common.createElement('a', { class: 'fp-backward' }, `${seekingTextBack}`);
 			const	fw = common.createElement('a', { class: 'fp-forward' }, `${seekingText}`);
 			const	seeking = props.seeking;
