@@ -38,10 +38,11 @@ const initFlowPlayerSetup = props => {
 	};
 	if (licenseKey && licenseKey.length > 0) {
 		config.key = licenseKey;
+		if (logo && ((typeof logo === 'object' && (Object.keys(logo) || []).length > 0) || (typeof logo === 'string' && logo.length > 0))) {
+			config.logo = logo;
+		}
 	}
-	if (logo && ((typeof logo === 'object' && (Object.keys(logo) || []).length > 0) || (typeof logo === 'string' && logo.length > 0))) {
-		config.logo = logo;
-	}
+	
 	window.flowplayer(`#${props.playerId}`, config).on('resume', onResume).on('error', onError);
 	
 	const intervalBreak = setInterval(function(){

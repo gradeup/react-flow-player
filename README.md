@@ -169,6 +169,23 @@ There are some props that are optional by the component :
 	- The styleUrl is used for specifying the versioned url for the stylesheet for the player's skin.
 	- Type : **_String_**
 	- Default : **https://releases.flowplayer.org/7.2.1/skin/skin.css**
+- `hlsConfig`
+	- The hlsConfig is used for specifying whether the hls configuration script should be loaded or not for specifying hls js options.
+	- Type : **_Boolean_**
+	- Default : **false**
+- `hlsConfigUrl`
+	- The hlsConfigUrl is used for specifying the versioned url for the hls configuration options.
+	- Type : **_String_**
+	- Default : **https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.8.4/hls.js**
+- `licenseKey`
+	- The licenseKey is used for specifying the license key of the commercial flowplayer.
+	- Type : **_String_**
+	- Default : **''**
+- `logo`
+	- Used for specifying the logo string or object in commercial version.
+	- String is the logo url, for object configuration ([Configuration options](https://flowplayer.com/docs/player/setup#logo-options))
+	- Type : **_String_** or **_Object_**
+	- Default : **''**
 
 ## Links
 
