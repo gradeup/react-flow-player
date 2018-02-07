@@ -27,6 +27,10 @@ const defaultPropsInit = {
 	hlsConfigUrl: 'https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.8.4/hls.js',
 	licenseKey: '',
 	logo: '',
+	playerClasses: '',
+	seekFwHtml: '',
+	seekBwHtml: '',
+	getPlayerApi: noop,
 };
 
 export default defaultPropsInit;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {equals} from 'ramda';
+import { equals } from 'ramda';
 import initFlowPlayerSetup from './lib/init-flow-player-setup';
 import initFlowPlayerCustom from './lib/init-flow-player-custom';
 import initFlowPlayerScript from './lib/init-flow-player-script';
@@ -11,10 +11,27 @@ class ReactFlowPlayer extends React.Component {
 		super();
 		this._initPlayer = this._initPlayer.bind(this);
 	}
+
 	_initPlayer() {
-		const { customButton, seeking, seekingText } = this.props;
-		initFlowPlayerSetup(Object.assign({}, this.props, { onLoad: () => initFlowPlayerCustom({ customButton, seeking, seekingText }) }));
+		const { customButton, seeking, seekingText, seekFwHtml, seekBwHtml, playerId } = this.props;
+		initFlowPlayerSetup(Object.assign({}, this.props, {
+			onLoad: () => {
+				initFlowPlayerCustom({
+					customButton,
+					seeking,
+					seekingText,
+					seekFwHtml,
+					seekBwHtml,
+					playerId,
+				});
+				const playerElem = document.getElementById(playerId);
+				if (playerElem) {
+					this.props.getPlayerApi(window.flowplayer(playerElem));
+				}
+			},
+		}));
 	}
+
 	componentDidMount() {
 		/* eslint-disable no-undef */
 		if (window.flowplayer) {
@@ -29,20 +46,23 @@ class ReactFlowPlayer extends React.Component {
 		}
 		/* eslint-disable no-undef */
 	}
+
 	shouldComponentUpdate(nextprops) {
 		return equals(this.props.sources, nextprops.sources) || equals(this.props.title, nextprops.title) || equals(this.props.live, nextprops.live) || equals(this.props.rtmp, nextprops.rtmp);
 	}
+
 	componentWillUpdate() {
 		if (window.flowplayer) {
 			this._initPlayer();
 		}
 	}
+
 	render() {
 		return (
 			<div
 				className={this.props.className}
 				dangerouslySetInnerHTML={{
-					__html: `<div id="${this.props.playerId}"></div>`
+					__html: `<div class="${this.props.playerClasses}" id="${this.props.playerId}"></div>`
 				}}
 			/>
 		);

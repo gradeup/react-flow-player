@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 
 const propTypesConfig = {
 	playerId: PropTypes.string.isRequired,
+	playerClasses: PropTypes.string,
 	playerInitScript: PropTypes.string.isRequired,
 	sources: PropTypes.array.isRequired,
 	className: PropTypes.string,
@@ -24,6 +25,8 @@ const propTypesConfig = {
 	customButton: PropTypes.array,
 	seeking: PropTypes.number,
 	seekingText: PropTypes.string,
+	seekFwHtml: PropTypes.string,
+	seekBwHtml: PropTypes.string,
 	onError: PropTypes.func,
 	onResume: PropTypes.func,
 	speedPlugin: PropTypes.bool,
@@ -33,6 +36,7 @@ const propTypesConfig = {
 	hlsConfig: PropTypes.bool,
 	hlsConfigUrl: PropTypes.string,
 	licenseKey: PropTypes.string,
+	getPlayerApi: PropTypes.func,
 	logo: PropTypes.oneOfType([
 		PropTypes.string,
 		PropTypes.object

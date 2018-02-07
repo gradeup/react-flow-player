@@ -25,19 +25,29 @@ const initFlowPlayerCustom = props => {
 		}
 	});
 	const seekingBtn = document.getElementsByClassName('fp-backward');
-
-	if (props.seeking && !isNaN(props.seeking) && (!seekingBtn || seekingBtn.length === 0)) {
+	const playerElem = document.getElementById(props.playerId);
+	if (
+		props.seeking &&
+		!isNaN(props.seeking) &&
+		(!seekingBtn || seekingBtn.length === 0) &&
+		playerElem
+	) {
 		(function () {
 			const common = flowplayer.common;
 			const	bean = flowplayer.bean;
-			const	fpControls = flowplayer();
+			const	fpControls = flowplayer(playerElem);
 			const seekingText = props.seekingText;
 			const seekingTextBack = ((props.seekingText || '').trim() !== '') ? `-${props.seekingText}` : `+${props.seekingText}`;
 			const	bw = common.createElement('a', { class: 'fp-backward' }, `${seekingTextBack}`);
 			const	fw = common.createElement('a', { class: 'fp-forward' }, `${seekingText}`);
 			const	seeking = props.seeking;
-
+			bw.innerHTML = props.seekBwHtml || bw.innerHTML;
+			fw.innerHTML = props.seekFwHtml || fw.innerHTML;
 			bean.on(bw, 'click', function () {
+				if (!fpControls) {
+					return;
+				}
+
 				const target = fpControls.video.time - seeking;
 				if (isNaN(target) || !fpControls.video.time) {
 					fpControls.play();
@@ -52,6 +62,10 @@ const initFlowPlayerCustom = props => {
 			});
 
 			bean.on(fw, 'click', function () {
+				if (!fpControls) {
+					return;
+				}
+
 				const target = fpControls.video.time + seeking;
 				if (isNaN(target) || !fpControls.video.duration){
 					fpControls.play();
@@ -69,6 +83,7 @@ const initFlowPlayerCustom = props => {
 				common.prepend(common.find('.fp-controls')[0], bw);
 				common.insertAfter(common.find('.fp-controls')[0], common.find('.fp-controls > .fp-elapsed')[0], fw);
 			}
+
 		})();
 	}
 };
