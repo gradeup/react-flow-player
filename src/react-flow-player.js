@@ -51,11 +51,11 @@ class ReactFlowPlayer extends React.Component {
 		return equals(this.props.sources, nextprops.sources) || equals(this.props.title, nextprops.title) || equals(this.props.live, nextprops.live) || equals(this.props.rtmp, nextprops.rtmp);
 	}
 
-	componentWillUpdate() {
-		if (window.flowplayer) {
-			this._initPlayer();
-		}
-	}
+	// componentWillUpdate() {
+	// 	if (window.flowplayer) {
+	// 		this._initPlayer();
+	// 	}
+	// }
 
 	render() {
 		return (

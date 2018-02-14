@@ -18,6 +18,7 @@ const initFlowPlayerSetup = props => {
 		onResume,
 		licenseKey,
 		logo,
+		hlsQualities,
 	} = props;
 	const config = {
 		clip: {
@@ -35,6 +36,7 @@ const initFlowPlayerSetup = props => {
 		rtmp,
 		speeds,
 		volume,
+		hlsQualities,
 	};
 	if (licenseKey && licenseKey.length > 0) {
 		config.key = licenseKey;
@@ -42,9 +44,9 @@ const initFlowPlayerSetup = props => {
 			config.logo = logo;
 		}
 	}
-	
+
 	window.flowplayer(`#${props.playerId}`, config).on('resume', onResume).on('error', onError);
-	
+
 	const intervalBreak = setInterval(function(){
 		const item = document.getElementsByClassName('fp-controls');
 		if (item) {
