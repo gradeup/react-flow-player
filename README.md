@@ -1,4 +1,4 @@
-# react-flow-player 
+# react-flow-player
 
 `<ReactFlowPlayer>` is a React Component for integrating the flow player into your react app. Passing props to the component will configure the flow player and will embed the player into your app.
 
@@ -14,11 +14,11 @@ npm install react-flow-player
 import ReactFlowPlayer from 'react-flow-player';
 <ReactFlowPlayer
 	playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
-	playerId="reactFlowPlayer" 
+	playerId="reactFlowPlayer"
 	sources={[
-			{ 
-					type: 'video/webm', 
-					src: 'http://edge.flowplayer.org/functional.webm' 
+			{
+					type: 'video/webm',
+					src: 'http://edge.flowplayer.org/functional.webm'
 			}
 	]}
 />
@@ -29,11 +29,11 @@ import ReactFlowPlayer from 'react-flow-player';
 import ReactFlowPlayer from 'react-flow-player';
 <ReactFlowPlayer
 	playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
-	playerId="reactFlowPlayer" 
+	playerId="reactFlowPlayer"
 	sources={[
-		{ 
-			type: 'video/webm', 
-			src: 'http://edge.flowplayer.org/functional.webm' 
+		{
+			type: 'video/webm',
+			src: 'http://edge.flowplayer.org/functional.webm'
 		}
 	]}
 	customButton={[
@@ -141,7 +141,7 @@ There are some props that are optional by the component :
 	- The function that executes when there occurs an error while playing the video.
 	- Type : **_Function_**
 	- Default : **`() => {}`**
-	- Parameters : 
+	- Parameters :
 	    -   first is the event object
 	    -   second is the flowplayer configured object
 	    -   third is the error object
@@ -149,7 +149,7 @@ There are some props that are optional by the component :
 	- The function that executes when video playing resumes.
 	- Type : **_Function_**
 	- Default : **`() => {}`**
-	- Parameters : 
+	- Parameters :
 	    -   first is the event object
 	    -   second is the flowplayer configured object
 - `speedPlugin`
@@ -186,6 +186,16 @@ There are some props that are optional by the component :
 	- String is the logo url, for object configuration ([Configuration options](https://flowplayer.com/docs/player/setup#logo-options))
 	- Type : **_String_** or **_Object_**
 	- Default : **''**
+- `playerClasses`
+	- classes to apply on video div
+- `seekFwHtml`
+	- Seek Forward button Html
+- `seekBwHtml`
+	- Seek Backward button Html
+- `getPlayerApi`
+	- func to get flowplayer instance [api Obj](https://flowplayer.com/docs/player/api)
+- `hlsQualities`
+	- [hlsQualities](https://flowplayer.com/docs/player/plugins#hlsjs) player option
 
 ## Links
 

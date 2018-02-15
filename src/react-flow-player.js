@@ -51,18 +51,16 @@ class ReactFlowPlayer extends React.Component {
 		return equals(this.props.sources, nextprops.sources) || equals(this.props.title, nextprops.title) || equals(this.props.live, nextprops.live) || equals(this.props.rtmp, nextprops.rtmp);
 	}
 
-	// componentWillUpdate() {
-	// 	if (window.flowplayer) {
-	// 		this._initPlayer();
-	// 	}
-	// }
-
 	render() {
+		const {
+			splash,
+			poster,
+		} = this.props;
 		return (
 			<div
 				className={this.props.className}
 				dangerouslySetInnerHTML={{
-					__html: `<div class="${this.props.playerClasses}" id="${this.props.playerId}"></div>`
+					__html: `<div class="${this.props.playerClasses}" id="${this.props.playerId}" style="${splash && poster ? 'background-image: url(' + poster + '); background-position: center' : ''}"></div>`
 				}}
 			/>
 		);

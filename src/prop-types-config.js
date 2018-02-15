@@ -14,6 +14,7 @@ const propTypesConfig = {
 	fullscreen: PropTypes.bool,
 	keyboard: PropTypes.bool,
 	live: PropTypes.bool,
+	splash: PropTypes.bool,
 	poster: PropTypes.string,
 	rtmp: PropTypes.oneOfType([
 		PropTypes.string,

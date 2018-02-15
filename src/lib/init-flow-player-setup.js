@@ -19,6 +19,7 @@ const initFlowPlayerSetup = props => {
 		licenseKey,
 		logo,
 		hlsQualities,
+		splash,
 	} = props;
 	const config = {
 		clip: {
@@ -37,6 +38,7 @@ const initFlowPlayerSetup = props => {
 		speeds,
 		volume,
 		hlsQualities,
+		splash,
 	};
 	if (licenseKey && licenseKey.length > 0) {
 		config.key = licenseKey;

@@ -31,6 +31,7 @@ const defaultPropsInit = {
 	seekFwHtml: '',
 	seekBwHtml: '',
 	getPlayerApi: noop,
+	splahs: false,
 };
 
 export default defaultPropsInit;
