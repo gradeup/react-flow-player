@@ -46,6 +46,7 @@ const initFlowPlayerCustom = props => {
 			const	seeking = props.seeking;
 			bw.innerHTML = props.seekBwHtml || bw.innerHTML;
 			fw.innerHTML = props.seekFwHtml || fw.innerHTML;
+			bean.off(bw, 'click');
 			bean.on(bw, 'click', function () {
 				if (!fpControls) {
 					return;
@@ -63,7 +64,7 @@ const initFlowPlayerCustom = props => {
 					}
 				}
 			});
-
+			bean.off(fw, 'click');
 			bean.on(fw, 'click', function () {
 				if (!fpControls) {
 					return;

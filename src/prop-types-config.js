@@ -42,6 +42,10 @@ const propTypesConfig = {
 		PropTypes.string,
 		PropTypes.object
 	]),
+	hlsjs: PropTypes.oneOfType([
+		PropTypes.bool,
+		PropTypes.object
+	]),
 };
 
 export default propTypesConfig;

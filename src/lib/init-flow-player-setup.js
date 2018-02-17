@@ -20,6 +20,7 @@ const initFlowPlayerSetup = props => {
 		logo,
 		hlsQualities,
 		splash,
+		hlsjs,
 	} = props;
 	const config = {
 		clip: {
@@ -39,6 +40,7 @@ const initFlowPlayerSetup = props => {
 		volume,
 		hlsQualities,
 		splash,
+		hlsjs,
 	};
 	if (licenseKey && licenseKey.length > 0) {
 		config.key = licenseKey;
@@ -47,15 +49,17 @@ const initFlowPlayerSetup = props => {
 		}
 	}
 
-	window.flowplayer(`#${props.playerId}`, config).on('resume', onResume).on('error', onError);
-
-	const intervalBreak = setInterval(function(){
-		const item = document.getElementsByClassName('fp-controls');
-		if (item) {
-			(props.onLoad || noop)();
-			clearInterval(intervalBreak);
-		}
-	}, 100);
+	const player = window.flowplayer(`#${props.playerId}`, config);
+	if (player) {
+		player.on('resume', onResume).on('error', onError);
+		const intervalBreak = setInterval(function(){
+			const item = document.getElementsByClassName('fp-controls');
+			if (item) {
+				(props.onLoad || noop)();
+				clearInterval(intervalBreak);
+			}
+		}, 100);
+	}
 };
 
 export default initFlowPlayerSetup;

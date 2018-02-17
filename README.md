@@ -196,6 +196,8 @@ There are some props that are optional by the component :
 	- func to get flowplayer instance [api Obj](https://flowplayer.com/docs/player/api)
 - `hlsQualities`
 	- [hlsQualities](https://flowplayer.com/docs/player/plugins#hlsjs) player option
+- `hlsjs`
+	- [hlsjs](https://flowplayer.com/docs/player/setup#hls.js-configuration) configuration
 
 ## Links
 
