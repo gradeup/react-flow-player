@@ -46,6 +46,13 @@ const propTypesConfig = {
 		PropTypes.bool,
 		PropTypes.object
 	]),
+	vodQualitySelectorSrc: PropTypes.string,
+	qualities: PropTypes.oneOfType([
+		PropTypes.array,
+		PropTypes.string,
+	]),
+	defaultQuality: PropTypes.string,
+	vodQualities: PropTypes.object,
 };
 
 export default propTypesConfig;

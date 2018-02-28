@@ -176,7 +176,6 @@ There are some props that are optional by the component :
 - `hlsConfigUrl`
 	- The hlsConfigUrl is used for specifying the versioned url for the hls configuration options.
 	- Type : **_String_**
-	- Default : **https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.8.4/hls.js**
 - `licenseKey`
 	- The licenseKey is used for specifying the license key of the commercial flowplayer.
 	- Type : **_String_**
@@ -198,6 +197,14 @@ There are some props that are optional by the component :
 	- [hlsQualities](https://flowplayer.com/docs/player/plugins#hlsjs) player option
 - `hlsjs`
 	- [hlsjs](https://flowplayer.com/docs/player/setup#hls.js-configuration) configuration
+- `vodQualitySelectorSrc`
+	- VOD quality selector plugin path [vodQualitySelectorSrc](https://flowplayer.com/docs/player/plugins.html#vod-quality-selector)
+- `qualities`
+	- vod quality selector configuration [qualities](https://flowplayer.com/docs/player/plugins.html#vod-quality-selector-configuration)
+- `defaultQuality`
+	- vod quality selector configuration [defaultQuality](https://flowplayer.com/docs/player/plugins.html#vod-quality-selector-configuration)
+- `vodQualities`
+	- template based vod quality selector plugin configuration [vodQualities](http://demos.flowplayer.org/scripting/qsel.html)
 
 ## Links
 

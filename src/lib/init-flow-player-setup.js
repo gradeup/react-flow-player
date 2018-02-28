@@ -21,6 +21,9 @@ const initFlowPlayerSetup = props => {
 		hlsQualities,
 		splash,
 		hlsjs,
+		defaultQuality,
+		qualities,
+		vodQualities,
 	} = props;
 	const config = {
 		clip: {
@@ -42,6 +45,18 @@ const initFlowPlayerSetup = props => {
 		splash,
 		hlsjs,
 	};
+	if (defaultQuality) {
+		Object.assign(config.clip, { defaultQuality });
+	}
+
+	if (qualities) {
+		Object.assign(config.clip, { qualities });
+	}
+
+	if (vodQualities) {
+		Object.assign(config.clip, { vodQualities });
+	}
+
 	if (licenseKey && licenseKey.length > 0) {
 		config.key = licenseKey;
 		if (logo && ((typeof logo === 'object' && (Object.keys(logo) || []).length > 0) || (typeof logo === 'string' && logo.length > 0))) {
