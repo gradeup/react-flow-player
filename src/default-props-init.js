@@ -37,6 +37,7 @@ const defaultPropsInit = {
 	defaultQuality: '',
 	qualities: '',
 	vodQualities: undefined,
+	vodQualitySelectorPlugin: false,
 };
 
 export default defaultPropsInit;

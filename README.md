@@ -197,6 +197,10 @@ There are some props that are optional by the component :
 	- [hlsQualities](https://flowplayer.com/docs/player/plugins#hlsjs) player option
 - `hlsjs`
 	- [hlsjs](https://flowplayer.com/docs/player/setup#hls.js-configuration) configuration
+- `vodQualitySelectorPlugin`
+	- The value for the integrating of the VOD Quality selector plugin when it's being used.
+	- Type : **_Boolean_**
+	- Default : **false**
 - `vodQualitySelectorSrc`
 	- VOD quality selector plugin path [vodQualitySelectorSrc](https://flowplayer.com/docs/player/plugins.html#vod-quality-selector)
 - `qualities`

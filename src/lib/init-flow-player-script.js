@@ -1,4 +1,4 @@
-const initFlowPlayerScript = ({ context, onLoad, src, hlsConfig, hlsPlugin, speedPlugin, hlsConfigUrl, hlsUrl, speedUrl, styleUrl, vodQualitySelectorSrc }) => {
+const initFlowPlayerScript = ({ context, onLoad, src, hlsConfig, hlsPlugin, speedPlugin, hlsConfigUrl, hlsUrl, speedUrl, styleUrl, vodQualitySelectorSrc, vodQualitySelectorPlugin }) => {
 	const scripts = [src];
 	if (hlsConfig && hlsConfigUrl) {
 		scripts.unshift(hlsConfigUrl);
@@ -8,7 +8,7 @@ const initFlowPlayerScript = ({ context, onLoad, src, hlsConfig, hlsPlugin, spee
 		scripts.push(hlsUrl);
 	}
 
-	if (vodQualitySelectorSrc) {
+	if (vodQualitySelectorPlugin && vodQualitySelectorSrc) {
 		scripts.push(vodQualitySelectorSrc);
 	}
 

@@ -53,6 +53,7 @@ const propTypesConfig = {
 	]),
 	defaultQuality: PropTypes.string,
 	vodQualities: PropTypes.object,
+	vodQualitySelectorPlugin: PropTypes.bool,
 };
 
 export default propTypesConfig;
