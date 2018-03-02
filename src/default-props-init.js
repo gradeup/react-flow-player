@@ -25,7 +25,7 @@ const defaultPropsInit = {
 	hlsUrl: 'https://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js',
 	hlsConfig: false,
 	hlsConfigUrl: '',
-	vodQualitySelectorSrc: '',
+	vodQualitySelectorSrc: 'https://releases.flowplayer.org/vod-quality-selector/flowplayer.vod-quality-selector.min.js',
 	licenseKey: '',
 	logo: '',
 	playerClasses: '',
