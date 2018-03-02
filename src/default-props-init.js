@@ -38,6 +38,10 @@ const defaultPropsInit = {
 	qualities: '',
 	vodQualities: undefined,
 	vodQualitySelectorPlugin: false,
+	vastPlugin: false,
+	vastPluginSrc: '',
+	vastIMASDKSrc: '//imasdk.googleapis.com/js/sdkloader/ima3.js',
+	vastConfig: {},
 };
 
 export default defaultPropsInit;

@@ -54,6 +54,27 @@ const propTypesConfig = {
 	defaultQuality: PropTypes.string,
 	vodQualities: PropTypes.object,
 	vodQualitySelectorPlugin: PropTypes.bool,
+	vastPlugin: PropTypes.bool,
+	vastPluginSrc: PropTypes.string,
+	vastIMASDKSrc: PropTypes.string,
+	vastConfig: PropTypes.shape({
+		// https://flowplayer.com/docs/player/vast#configuration-options
+		adRules: PropTypes.string,
+		ads: PropTypes.arrayOf(PropTypes.shape({
+			// https://flowplayer.com/docs/player/vast#ads-options
+			time: PropTypes.number,
+			adTag: PropTypes.string,
+		})),
+		adsRenderingSettings: PropTypes.object,
+		playlist: PropTypes.array,
+		redirects: PropTypes.number,
+		showTitle: PropTypes.bool,
+		VpaidMode: PropTypes.oneOfType([
+			PropTypes.string,
+			PropTypes.number,
+		]),
+		vastLoadTimeout: PropTypes.number,
+	})
 };
 
 export default propTypesConfig;

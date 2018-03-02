@@ -209,6 +209,17 @@ There are some props that are optional by the component :
 	- vod quality selector configuration [defaultQuality](https://flowplayer.com/docs/player/plugins.html#vod-quality-selector-configuration)
 - `vodQualities`
 	- template based vod quality selector plugin configuration [vodQualities](http://demos.flowplayer.org/scripting/qsel.html)
+- `vastPlugin`
+	- The value for the integration of the VAST advertisement plugin when it's being used.
+	- Type : **_Boolean_**
+	- Default : **false**
+- `vastPluginSrc`
+	- VAST advertisement plugin path. Note: This link is different for each authorized domain. Check [prerequisites](https://flowplayer.com/docs/player/vast#prerequisites)
+	- Type : **_String_**
+- `vastIMASDKSrc`
+	- VAST IMA SDK path. You shouldn't need to change this.
+- `vastConfig`
+	- VAST plugin configuration [object](https://flowplayer.com/docs/player/vast#configuration-options)
 
 ## Links
 
