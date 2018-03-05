@@ -1,4 +1,20 @@
-const initFlowPlayerScript = ({ context, onLoad, src, hlsConfig, hlsPlugin, speedPlugin, hlsConfigUrl, hlsUrl, speedUrl, styleUrl, vodQualitySelectorSrc }) => {
+const initFlowPlayerScript = ({ 
+	context,
+	onLoad,
+	src,
+	hlsConfig,
+	hlsPlugin,
+	speedPlugin,
+	hlsConfigUrl,
+	hlsUrl,
+	speedUrl,
+	styleUrl,
+	vodQualitySelectorSrc,
+	vodQualitySelectorPlugin,
+	vastPlugin,
+	vastPluginSrc,
+	vastIMASDKSrc,
+}) => {
 	const scripts = [src];
 	if (hlsConfig && hlsConfigUrl) {
 		scripts.unshift(hlsConfigUrl);
@@ -8,12 +24,16 @@ const initFlowPlayerScript = ({ context, onLoad, src, hlsConfig, hlsPlugin, spee
 		scripts.push(hlsUrl);
 	}
 
-	if (vodQualitySelectorSrc) {
+	if (vodQualitySelectorPlugin && vodQualitySelectorSrc) {
 		scripts.push(vodQualitySelectorSrc);
 	}
 
 	if (speedPlugin && speedUrl) {
 		scripts.push(speedUrl);
+	}
+
+	if (vastPlugin && vastPluginSrc && vastIMASDKSrc) {
+		scripts.push(vastIMASDKSrc, vastPluginSrc);
 	}
 
 	// Stylesheet for the basic flowplayer
