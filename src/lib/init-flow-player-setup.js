@@ -45,7 +45,7 @@ const initFlowPlayerSetup = props => {
 		hlsQualities,
 		splash,
 		hlsjs,
-		ima,
+		ima: vastConfig,
 	};
 	if (defaultQuality) {
 		Object.assign(config.clip, { defaultQuality });
@@ -57,10 +57,6 @@ const initFlowPlayerSetup = props => {
 
 	if (vodQualities) {
 		Object.assign(config.clip, { vodQualities });
-	}
-
-	if (vastConfig) {
-		Object.assign(config.ima, vastConfig);
 	}
 
 	if (licenseKey && licenseKey.length > 0) {
