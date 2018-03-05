@@ -6,6 +6,7 @@ const propTypesConfig = {
 	playerInitScript: PropTypes.string.isRequired,
 	sources: PropTypes.array.isRequired,
 	className: PropTypes.string,
+	analytics: PropTypes.string,
 	adaptiveRatio: PropTypes.bool,
 	aspectRatio: PropTypes.string,
 	autoplay: PropTypes.bool,
