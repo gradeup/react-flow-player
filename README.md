@@ -187,6 +187,10 @@ There are some props that are optional by the component :
 	- Default : **''**
 - `playerClasses`
 	- classes to apply on video div
+- `analytics`
+	- Google analytics ID ([documentation](https://flowplayer.com/docs/player/analytics))
+	- Type : **_String_**
+	- Default : **''**
 - `seekFwHtml`
 	- Seek Forward button Html
 - `seekBwHtml`

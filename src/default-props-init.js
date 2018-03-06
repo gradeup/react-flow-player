@@ -29,6 +29,7 @@ const defaultPropsInit = {
 	licenseKey: '',
 	logo: '',
 	playerClasses: '',
+	analytics: '',
 	seekFwHtml: '',
 	seekBwHtml: '',
 	getPlayerApi: noop,

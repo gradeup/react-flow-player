@@ -25,6 +25,7 @@ const initFlowPlayerSetup = props => {
 		qualities,
 		vodQualities,
 		vastConfig,
+		analytics,
 	} = props;
 	const config = {
 		clip: {
@@ -46,6 +47,7 @@ const initFlowPlayerSetup = props => {
 		splash,
 		hlsjs,
 		ima: vastConfig,
+		analytics,
 	};
 	if (defaultQuality) {
 		Object.assign(config.clip, { defaultQuality });
