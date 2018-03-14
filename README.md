@@ -11,40 +11,42 @@ npm install react-flow-player
 
 ### Without Custom Buttons
 ``` javascript
-import ReactFlowPlayer from 'react-flow-player';
+import ReactFlowPlayer from "react-flow-player";
+
 <ReactFlowPlayer
-	playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
-	playerId="reactFlowPlayer"
-	sources={[
-			{
-					type: 'video/webm',
-					src: 'http://edge.flowplayer.org/functional.webm'
-			}
-	]}
-/>
+  playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
+  playerId="reactFlowPlayer"
+  sources={[
+    {
+      type: "video/webm",
+      src: "http://edge.flowplayer.org/functional.webm"
+    }
+  ]}
+/>;
 ```
 
 ### With Custom Buttons
 ``` javascript
-import ReactFlowPlayer from 'react-flow-player';
+import ReactFlowPlayer from "react-flow-player";
+
 <ReactFlowPlayer
-	playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
-	playerId="reactFlowPlayer"
-	sources={[
-		{
-			type: 'video/webm',
-			src: 'http://edge.flowplayer.org/functional.webm'
-		}
-	]}
-	customButton={[
-		{
-			component: (<a id="custom-btn">Custom React Component</a>),
-			class: 'fp-controls > .fp-volume',
-			id: 'custom-btn',
-			place: 'before',
-		},
-	]}
-/>
+  playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
+  playerId="reactFlowPlayer"
+  sources={[
+    {
+      type: "video/webm",
+      src: "http://edge.flowplayer.org/functional.webm"
+    }
+  ]}
+  customButton={[
+    {
+      component: <a id="custom-btn">Custom React Component</a>,
+      class: "fp-controls > .fp-volume",
+      id: "custom-btn",
+      place: "before"
+    }
+  ]}
+/>;
 ```
 
 ## Required Props
