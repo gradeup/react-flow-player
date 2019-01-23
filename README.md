@@ -14,7 +14,7 @@ npm install react-flow-player
 import ReactFlowPlayer from "react-flow-player";
 
 <ReactFlowPlayer
-  playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
+  playerInitScript="http://releases.flowplayer.org/7.2.7/flowplayer.min.js"
   playerId="reactFlowPlayer"
   sources={[
     {
@@ -30,7 +30,7 @@ import ReactFlowPlayer from "react-flow-player";
 import ReactFlowPlayer from "react-flow-player";
 
 <ReactFlowPlayer
-  playerInitScript="http://releases.flowplayer.org/7.2.1/flowplayer.min.js"
+  playerInitScript="http://releases.flowplayer.org/7.2.7/flowplayer.min.js"
   playerId="reactFlowPlayer"
   sources={[
     {
@@ -170,7 +170,7 @@ There are some props that are optional by the component :
 - `styleUrl`
 	- The styleUrl is used for specifying the versioned url for the stylesheet for the player's skin.
 	- Type : **_String_**
-	- Default : **https://releases.flowplayer.org/7.2.1/skin/skin.css**
+	- Default : **https://releases.flowplayer.org/7.2.7/skin/skin.css**
 - `hlsConfig`
 	- The hlsConfig is used for specifying whether the hls configuration script should be loaded or not for specifying hls js options.
 	- Type : **_Boolean_**
