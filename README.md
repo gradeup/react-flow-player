@@ -70,6 +70,10 @@ There are some props that are optional by the component :
 - `autoplay` - Whether the video should play as soon as it is embedded. - Type : **_Boolean_** - Default : **false**
 - `bgcolor` - The background color of the player. - Type : **_String_** - Default : **'#2d3647'**
 - `title` - The title of the video to be displayed on the player. - Type : **_String_** - Default : **'Video'**
+- `description` - Descriptive text to show when hovering the player. - Type : **_String_** - Default : **'none'**
+- `muted` - Whether the player should start with sound turned off. - Type : **_Boolean_** - Default : **false**
+- `loop` - Whether the player should loop the current video. - Type : **_Boolean_** - Default : **false**
+- `preload` - Whether to preload the vido clip or its metadata. auto will attempt to load the complete video clip (careful: this might impose high bandwidth on page load usage even if user does nto start the video). - Type : **_String_** - Default : **'none'**
 - `fullscreen` - Whether the fullscreen is allowed or not. - Type : **_Boolean_** - Default : **true**
 - `keyboard` - Whether the keyboard shortcuts are allowed or not. - [Keyboard Shortcuts](https://flowplayer.com/docs/player/setup#keyboard) - Type : **_Boolean_** - Default : **true**
 - `live` - Whether the video which is embedded is live streaming video or not. - Type : **_Boolean_** - Default : **false**
