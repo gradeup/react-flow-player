@@ -47,6 +47,7 @@ const defaultPropsInit = {
 	vastPluginSrc: '',
 	vastIMASDKSrc: '//imasdk.googleapis.com/js/sdkloader/ima3.js',
 	vastConfig: {},
+	subtitles: [],
 };
 
 export default defaultPropsInit;

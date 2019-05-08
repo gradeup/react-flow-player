@@ -11,6 +11,7 @@ const initFlowPlayerSetup = props => {
 		loop,
 		preload,
 		sources,
+		subtitles,
 		fullscreen,
 		keyboard,
 		live,
@@ -67,6 +68,10 @@ const initFlowPlayerSetup = props => {
 
 	if (vodQualities) {
 		Object.assign(config.clip, { vodQualities });
+	}
+
+	if (subtitles && subtitles.length > 0) {
+		Object.assign(config.clip, { subtitles });
 	}
 
 	if (licenseKey && licenseKey.length > 0) {
