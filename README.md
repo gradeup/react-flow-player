@@ -1,3 +1,7 @@
+
+# The Project is no longer maintained. Please use an actively developed [fork](https://github.com/gradeup/react-flow-player/network/members) !!!
+ 
+
 # react-flow-player
 
 `<ReactFlowPlayer>` is a React Component for integrating the flow player into your react app. Passing props to the component will configure the flow player and will embed the player into your app.
